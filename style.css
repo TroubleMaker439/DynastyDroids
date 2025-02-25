@@ -5,6 +5,8 @@
     --dark-bg: #19061C;
     --light-text: #F9F9F9;
     --section-padding: 6rem 0 5rem;
+    --nav-height: 80px;
+    --mobile-nav-height: 60px;
 }
 
 * {
@@ -19,6 +21,7 @@ body {
     color: var(--light-text);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: var(--nav-height);
 }
 
 .navbar {
@@ -27,11 +30,11 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    height: var(--nav-height);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transform: translateZ(0);
 }
-
 
 .nav-container {
     max-width: 1200px;
@@ -39,6 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .logo {
@@ -73,16 +77,14 @@ body {
         }
 
 .hero {
-    padding-top: 80px;
-    height: 100vh;
+    height: calc(100svh - var(--nav-height));
     background: linear-gradient(rgba(53, 2, 21, 0.8), rgba(53, 2, 21, 0.8)), url('background-pattern.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    box-sizing: border-box;
+    border-bottom: 2px solid var(--dark-bg);
 }
 
 .hero-content {
@@ -132,7 +134,7 @@ body {
 }
 
 .about-section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: var(--nav-height);
     padding: var(--section-padding);
 }
 
@@ -330,18 +332,21 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        margin-top: 100px;
-        height: calc(100vh - 100px);
+    :root {
+        --nav-height: var(--mobile-nav-height);
     }
 
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
+    body {
+        padding-top: var(--mobile-nav-height);
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+        height: var(--mobile-nav-height);
+    }
+
+    .hero {
+        height: calc(100svh - var(--mobile-nav-height));
     }
 
     .nav-links {
@@ -358,12 +363,15 @@ body {
     .team-grid {
         grid-template-columns: 1fr;
     }
+
+    .about-section {
+        scroll-margin-top: var(--mobile-nav-height);
+    }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding-top: 100px;
-        height: calc(100vh - 20px);
+    :root {
+        --mobile-nav-height: 55px;
     }
 
     .hero-title {
@@ -382,4 +390,9 @@ body {
             padding: 0.5rem;
             font-size: 0.9rem;
         }
+
+    .hero {
+        min-height: calc(100svh - var(--mobile-nav-height));
+        height: auto;
+    }
 }

@@ -350,7 +350,10 @@ body {
     }
 
     .hero {
-        height: calc(100svh - var(--mobile-nav-height));
+        height: 100vh;
+        min-height: 100vh;
+        margin-top: calc(-1 * var(--mobile-nav-height));
+        padding-top: var(--mobile-nav-height));
     }
 
     .nav-links {
@@ -396,7 +399,9 @@ body {
         }
 
     .hero {
-        min-height: calc(100svh - var(--mobile-nav-height));
-        height: auto;
+        height: 100vh;
+        min-height: 100vh;
+        margin-top: calc(-1 * var(--mobile-nav-height));
+        padding-top: var(--mobile-nav-height));
     }
 }

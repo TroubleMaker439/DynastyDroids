@@ -1,7 +1,8 @@
 :root {
     --primary-color: #91122D;
     --secondary-color: #350215;
-    --accent-color: #CBA28E;
+    --accent-color: #91122D;
+    --nav-hover-color: #CBA28E;
     --dark-bg: #19061C;
     --light-text: #F9F9F9;
     --nav-height: 80px;
@@ -23,7 +24,7 @@ body {
 }
 
 .navbar {
-    background: var(--primary-color);
+    background: var(--primary-color) !important;
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
@@ -68,7 +69,7 @@ body {
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-color);
+            background: var(--nav-hover-color) !important;
             transition: width 0.3s ease;
         }
 

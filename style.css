@@ -24,7 +24,7 @@ body {
 }
 
 .navbar {
-    background: var(--primary-color) !important;
+    background: var(--primary-color);
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
@@ -45,11 +45,14 @@ body {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
     color: var(--light-text);
     text-decoration: none;
     font-size: clamp(1.4rem, 4vw, 1.8rem);
     padding: 0 0.5rem;
+}
+
+.logo-abbr {
+    display: none;
 }
 
 .nav-links {
@@ -71,7 +74,7 @@ body {
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--nav-hover-color) !important;
+            background: var(--nav-hover-color);
             transition: width 0.3s ease;
         }
 
@@ -306,7 +309,7 @@ body {
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #fff;
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.15));
     }
 
 .role-badge,
@@ -363,7 +366,7 @@ body {
     left: 0;
     width: 100%;
     height: 80px;
-    background: linear-gradient(0deg, rgba(145, 18, 45, 0.5) 0%, rgba(145, 18, 45, 0.2) 50%, transparent 100% );
+    background: linear-gradient(0deg, rgba(145, 18, 45, 0.5) 0%, rgba(145, 18, 45, 0.2) 50%, transparent 100%);
     pointer-events: none;
     z-index: 900;
     backdrop-filter: blur(12px);
@@ -375,16 +378,23 @@ body {
         --nav-height: var(--mobile-nav-height);
     }
 
-    .nav-links {
-        gap: 1.5rem;
+    .logo-full {
+        display: none;
+    }
+
+    .logo-abbr {
+        display: inline;
     }
 
     .logo {
-        font-size: 1.4rem;
-        max-width: 200px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 1.2rem;
+        max-width: 80px;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
     }
 
     .stats-grid,

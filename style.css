@@ -48,6 +48,8 @@ body {
     font-size: 1.8rem;
     color: var(--light-text);
     text-decoration: none;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    padding: 0 0.5rem;
 }
 
 .nav-links {
@@ -375,6 +377,14 @@ body {
 
     .nav-links {
         gap: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .stats-grid,

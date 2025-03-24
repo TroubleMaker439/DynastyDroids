@@ -1,178 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Meet Our Team</title>
-    <meta name="description" content="Meet the brilliant minds behind Dynasty Droids robotics team">
+    <meta name="description" content="Meet the talented students and mentors behind Dynasty Droids robotics team - coders, builders, and innovators shaping the future of STEM">
+    <meta name="keywords" content="robotics team members, Dynasty Droids team, STEM students, robotics engineers, young innovators">
+    <meta name="author" content="Dynasty Droids">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meet the Dynasty Droids Team | Robotics Innovators">
+    <meta property="og:description" content="Discover the talented students and mentors behind our award-winning robotics team">
+    <meta property="og:image" content="https://www.dynastydroids.com/images/team-preview.jpg">
+    <meta property="og:url" content="https://www.dynastydroids.com/members">
+    <meta property="og:site_name" content="Dynasty Droids">
+
+    <meta name="twitter:card" content="logo.png">
+    <meta name="twitter:title" content="Meet the Dynasty Droids Team | Robotics Innovators">
+    <meta name="twitter:description" content="Discover the talented students and mentors behind our award-winning robotics team">
+    <meta name="twitter:image" content="https://www.dynastydroids.com/images/team-preview.jpg">
+    <meta name="twitter:site" content="@DynastyDroids">
+
+    <meta name="theme-color" content="#91122D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="canonical" href="https://www.dynastydroids.com/members">
+
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="logo.png" as="image">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" type="image/x-icon" href="logo.ico">
-    <link rel="canonical" href="https://www.dynastydroids.com/members">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Meet Our Team",
+          "description": "The talented members of Dynasty Droids robotics team",
+          "url": "https://www.dynastydroids.com/members",
+          "image": "https://www.dynastydroids.com/images/team-preview.jpg",
+          "about": {
+            "@type": "Organization",
+            "name": "Dynasty Droids",
+            "description": "Student robotics team specializing in competitive robotics and STEM education"
+          }
+        }
+    </script>
+
 </head>
 <body class="members-page">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="/" class="logo">
+            <a href="/" class="logo" aria-label="Dynasty Droids homepage">
                 <span class="logo-full">Dynasty Droids</span>
                 <span class="logo-abbr">D. D.</span>
             </a>
             <div class="nav-links">
                 <a href="/">Home</a>
-                <a href="/members" class="active">Members</a>
+                <a href="/members" class="active" aria-current="page">Members</a>
                 <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <main class="scroll-container">
-        <section class="hero scroll-section">
+        <section class="hero scroll-section" aria-labelledby="main-heading">
             <div class="hero-content">
-                <h1 class="hero-title">Our Dynasty</h1>
+                <h1 class="hero-title" id="main-heading">Our Dynasty</h1>
                 <p class="section-subtitle">The brilliant minds behind the machines</p>
             </div>
         </section>
 
-        <section class="scroll-section">
+        <section class="scroll-section" aria-labelledby="leadership-heading">
             <div class="section-container centered-content">
                 <div class="section-header">
-                    <h2 class="section-title">Leadership</h2>
+                    <h2 class="section-title" id="leadership-heading">Leadership</h2>
                     <p class="section-subtitle">Guiding our vision forward</p>
                 </div>
                 <div class="leadership-grid">
-                    <div class="leader-card">
+                    <div class="leader-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Magda Stanescu">
+                            <img src="logo.png" alt="Magda Stanescu" width="200" height="200" loading="lazy" itemprop="image">
                         </div>
                         <div class="member-info">
-                            <h3 class="member-name">Magda Stanescu</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="scroll-section">
-            <div class="section-container centered-content">
-                <div class="section-header">
-                    <h2 class="section-title">Technical Crew</h2>
-                    <p class="section-subtitle">Masters of innovation</p>
-                </div>
-                <div class="department-card">
-                    <h3 class="department-title"><i class="fas fa-code"></i> Code Wizards</h3>
-                    <div class="team-grid">
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Andrei">
-                            </div>
-                            <h4 class="member-name">Andrei</h4>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Andu">
-                            </div>
-                            <h4 class="member-name">Andu</h4>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Iustin">
-                            </div>
-                            <h4 class="member-name">Iustin</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="department-card">
-                    <h3 class="department-title"><i class="fas fa-cogs"></i> Build Masters</h3>
-                    <div class="team-grid">
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Cristi">
-                            </div>
-                            <h4 class="member-name">Cristi</h4>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Matei">
-                            </div>
-                            <h4 class="member-name">Matei</h4>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="department-card">
-                    <h3 class="department-title"><i class="fas fa-comments"></i> PR Team</h3>
-                    <div class="team-grid">
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Bianca">
-                            </div>
-                            <h4 class="member-name">Bianca</h4>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Irina">
-                            </div>
-                            <h4 class="member-name">Irina</h4>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-image">
-                                <img src="logo.png" alt="Miruna">
-                            </div>
-                            <h4 class="member-name">Miruna</h4>
+                            <h3 class="member-name" itemprop="name">Magda Stanescu</h3>
+                            <meta itemprop="jobTitle" content="Team Captain">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="scroll-section">
+        <section class="scroll-section" aria-labelledby="teamleaders-heading">
             <div class="section-container centered-content">
                 <div class="section-header">
-                    <h2 class="section-title">Key Contributors</h2>
+                    <h2 class="section-title" id="teamleaders-heading">Team Leaders</h2>
+                    <p class="section-subtitle">Driving daily operations</p>
+                </div>
+                <div class="team-grid">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                        <div class="member-image">
+                            <img src="logo.png" alt="Andreas" width="150" height="150" loading="lazy" itemprop="image">
+                        </div>
+                        <h3 class="member-name" itemprop="name">Andreas</h3>
+                        <meta itemprop="jobTitle" content="Programming Lead">
+                    </div>
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                        <div class="member-image">
+                            <img src="logo.png" alt="Matei" width="150" height="150" loading="lazy" itemprop="image">
+                        </div>
+                        <h3 class="member-name" itemprop="name">Matei</h3>
+                        <meta itemprop="jobTitle" content="Build Lead">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section" aria-labelledby="technical-heading">
+            <div class="section-container centered-content">
+                <div class="section-header">
+                    <h2 class="section-title" id="technical-heading">Technical Crew</h2>
+                    <p class="section-subtitle">Masters of innovation</p>
+                </div>
+                <div class="department-card">
+                    <h3 class="department-title"><i class="fas fa-code" aria-hidden="true"></i> Code Wizards</h3>
+                    <div class="team-grid">
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Andrei" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Andrei</h4>
+                            <meta itemprop="jobTitle" content="Software Developer">
+                        </div>
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Andu" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Andu</h4>
+                            <meta itemprop="jobTitle" content="Software Developer">
+                        </div>
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Iustin" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Iustin</h4>
+                            <meta itemprop="jobTitle" content="Software Developer">
+                        </div>
+                    </div>
+                </div>
+                <div class="department-card">
+                    <h3 class="department-title"><i class="fas fa-cogs" aria-hidden="true"></i> Build Masters</h3>
+                    <div class="team-grid">
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Cristi" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Cristi</h4>
+                            <meta itemprop="jobTitle" content="Mechanical Engineer">
+                        </div>
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Matei" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Matei</h4>
+                            <meta itemprop="jobTitle" content="Mechanical Engineer">
+                        </div>
+                    </div>
+                </div>
+                <div class="department-card">
+                    <h3 class="department-title"><i class="fas fa-comments" aria-hidden="true"></i> PR Team</h3>
+                    <div class="team-grid">
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Bianca" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Bianca</h4>
+                            <meta itemprop="jobTitle" content="PR Coordinator">
+                        </div>
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Irina" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Irina</h4>
+                            <meta itemprop="jobTitle" content="PR Coordinator">
+                        </div>
+                        <div class="member-card" itemscope itemtype="https://schema.org/Person">
+                            <div class="member-image">
+                                <img src="logo.png" alt="Miruna" width="150" height="150" loading="lazy" itemprop="image">
+                            </div>
+                            <h4 class="member-name" itemprop="name">Miruna</h4>
+                            <meta itemprop="jobTitle" content="PR Coordinator">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section" aria-labelledby="contributors-heading">
+            <div class="section-container centered-content">
+                <div class="section-header">
+                    <h2 class="section-title" id="contributors-heading">Key Contributors</h2>
                     <p class="section-subtitle">Our invaluable support network</p>
                 </div>
                 <div class="team-grid">
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Razvan">
+                            <img src="logo.png" alt="Razvan" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Razvan</h3>
-                        <p class="member-role">CAD</p>
+                        <h3 class="member-name" itemprop="name">Razvan</h3>
+                        <p class="member-role" itemprop="jobTitle">CAD</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Agnes">
+                            <img src="logo.png" alt="Agnes" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Agnes</h3>
-                        <p class="member-role">PR</p>
+                        <h3 class="member-name" itemprop="name">Agnes</h3>
+                        <p class="member-role" itemprop="jobTitle">PR</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Bogdan">
+                            <img src="logo.png" alt="Bogdan" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Bogdan</h3>
-                        <p class="member-role">PR</p>
+                        <h3 class="member-name" itemprop="name">Bogdan</h3>
+                        <p class="member-role" itemprop="jobTitle">PR</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Daria">
+                            <img src="logo.png" alt="Daria" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Daria</h3>
-                        <p class="member-role">PR</p>
+                        <h3 class="member-name" itemprop="name">Daria</h3>
+                        <p class="member-role" itemprop="jobTitle">PR</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Raul">
+                            <img src="logo.png" alt="Raul" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Raul</h3>
-                        <p class="member-role">PR</p>
+                        <h3 class="member-name" itemprop="name">Raul</h3>
+                        <p class="member-role" itemprop="jobTitle">PR</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" itemscope itemtype="https://schema.org/Person">
                         <div class="member-image">
-                            <img src="logo.png" alt="Victor">
+                            <img src="logo.png" alt="Victor" width="150" height="150" loading="lazy" itemprop="image">
                         </div>
-                        <h3 class="member-name">Victor</h3>
-                        <p class="member-role">PR</p>
+                        <h3 class="member-name" itemprop="name">Victor</h3>
+                        <p class="member-role" itemprop="jobTitle">PR</p>
                     </div>
                 </div>
             </div>

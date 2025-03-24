@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="Lzz6h7qEHWIGKSQd3bjM7rOS6QvChorrM_uUEMu0_rE" />
+
     <title>Dynasty Droids</title>
     <meta name="description" content="Dynasty Droids is at the forefront of robotics innovation, combining technical excellence with creative problem-solving to forge the future of autonomous systems.">
-    <meta name="keywords" content="Dynasty Droids, robotics, STEM education, autonomous systems, engineering, innovation">
+    <meta name="keywords" content="Dynasty Droids, robotics team, STEM education, autonomous systems, engineering innovation, robotics competition">
     <meta name="author" content="Dynasty Droids">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Dynasty Droids - Pioneering Robotics Innovation">
     <meta property="og:description" content="Dynasty Droids is at the forefront of robotics innovation, combining technical excellence with creative problem-solving to forge the future of autonomous systems.">
     <meta property="og:image" content="https://www.dynastydroids.com/logo.png">
     <meta property="og:url" content="https://www.dynastydroids.com/">
+    <meta property="og:site_name" content="Dynasty Droids">
+
+    <meta name="twitter:card" content="logo.png">
+    <meta name="twitter:title" content="Dynasty Droids - Pioneering Robotics Innovation">
+    <meta name="twitter:description" content="Dynasty Droids is at the forefront of robotics innovation, combining technical excellence with creative problem-solving to forge the future of autonomous systems.">
+    <meta name="twitter:image" content="https://www.dynastydroids.com/logo.png">
+    <meta name="twitter:site" content="@DynastyDroids">
+
+    <meta name="theme-color" content="#91122D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">
+
     <link rel="canonical" href="https://www.dynastydroids.com/">
+    >
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="logo.png" as="image">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Dynasty Droids",
+          "url": "https://www.dynastydroids.com",
+          "logo": "https://www.dynastydroids.com/logo.png",
+          "description": "Pioneering robotics innovation through technical excellence and creative problem-solving",
+          "foundingDate": "2023",
+          "sameAs": [
+            "https://instagram.com/dynastydroids"
+          ]
+        }
+    </script>
+
 </head>
 <body class="home-page">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="/" class="logo">
+            <a href="/" class="logo" aria-label="Dynasty Droids homepage">
                 <span class="logo-full">Dynasty Droids</span>
                 <span class="logo-abbr">D. D.</span>
             </a>
             <div class="nav-links">
-                <a href="/" class="active">Home</a>
+                <a href="/" class="active" aria-current="page">Home</a>
                 <a href="/members">Members</a>
                 <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <main class="scroll-container">
-        <section class="hero scroll-section">
+        <section class="hero scroll-section" aria-labelledby="main-heading">
             <div class="hero-content">
-                <img src="logo.png" alt="Dynasty Droids Logo" class="header-logo">
-                <h1 class="hero-title">Forging the Future of Robotics</h1>
+                <img src="logo.png" alt="Dynasty Droids Logo" class="header-logo" width="320" height="320" loading="eager">
+                <h1 class="hero-title" id="main-heading">Forging the Future of Robotics</h1>
             </div>
         </section>
 
-        <section class="about-section scroll-section">
+        <section class="about-section scroll-section" aria-labelledby="mission-heading">
             <div class="section-container centered-content">
                 <div class="section-header">
-                    <h2 class="section-title">Our Mission</h2>
+                    <h2 class="section-title" id="mission-heading">Our Mission</h2>
                     <p class="section-subtitle">Pioneering Robotics Excellence</p>
                 </div>
                 <div class="text-content">
@@ -52,21 +95,21 @@
                         At Dynasty Droids, we're pioneering a new era of robotics innovation. Our multidisciplinary team combines technical excellence with creative problem-solving to tackle complex challenges. We're committed to fostering STEM education while pushing the boundaries of autonomous systems.
                     </p>
                     <div class="stats-grid">
-                        <div class="stat-card">
+                        <div class="stat-card" aria-label="10+ Active Members">
                             <div class="stat-number">10+</div>
                             <div class="stat-details">
                                 <h3 class="stat-label">Active Members</h3>
                                 <p class="stat-description">Dedicated innovators</p>
                             </div>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card" aria-label="Future competitions">
                             <div class="stat-number">0</div>
                             <div class="stat-details">
                                 <h3 class="stat-label">Competitions</h3>
                                 <p class="stat-description">Future achievements <span class="yet-text">(coming soon)</span></p>
                             </div>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card" aria-label="1000+ Code Hours">
                             <div class="stat-number">1000+</div>
                             <div class="stat-details">
                                 <h3 class="stat-label">Code Hours</h3>
@@ -78,31 +121,31 @@
             </div>
         </section>
 
-        <section class="values-section scroll-section">
+        <section class="values-section scroll-section" aria-labelledby="values-heading">
             <div class="section-container centered-content">
                 <div class="section-header">
-                    <h2 class="section-title">Core Values</h2>
+                    <h2 class="section-title" id="values-heading">Core Values</h2>
                     <p class="section-subtitle">The pillars of our success</p>
                 </div>
                 <div class="values-grid">
-                    <article class="value-card">
+                    <article class="value-card" aria-labelledby="innovation-heading">
                         <div class="card-header">
-                            <i class="fas fa-brain card-icon"></i>
-                            <h3 class="card-title">Innovation</h3>
+                            <i class="fas fa-brain card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title" id="innovation-heading">Innovation</h3>
                         </div>
                         <p class="card-text">Pushing technological boundaries through creative engineering solutions</p>
                     </article>
-                    <article class="value-card">
+                    <article class="value-card" aria-labelledby="collaboration-heading">
                         <div class="card-header">
-                            <i class="fas fa-users card-icon"></i>
-                            <h3 class="card-title">Collaboration</h3>
+                            <i class="fas fa-users card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title" id="collaboration-heading">Collaboration</h3>
                         </div>
                         <p class="card-text">Combining diverse skills for superior results</p>
                     </article>
-                    <article class="value-card">
+                    <article class="value-card" aria-labelledby="education-heading">
                         <div class="card-header">
-                            <i class="fas fa-graduation-cap card-icon"></i>
-                            <h3 class="card-title">Education</h3>
+                            <i class="fas fa-graduation-cap card-icon" aria-hidden="true"></i>
+                            <h3 class="card-title" id="education-heading">Education</h3>
                         </div>
                         <p class="card-text">Commitment to STEM outreach and mentorship</p>
                     </article>

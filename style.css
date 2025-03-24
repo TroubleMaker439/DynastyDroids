@@ -1,3 +1,8 @@
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 :root {
     --primary-color: #91122D;
     --secondary-color: #350215;
@@ -85,7 +90,7 @@ body {
 
 .scroll-container {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
@@ -113,7 +118,8 @@ body {
     position: relative;
 }
 
-.members-page .hero {
+.members-page .hero,
+.contact-page .hero {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
 }
 
@@ -183,6 +189,54 @@ body {
     margin-top: 1rem;
 }
 
+/* Contact Page Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+    .contact-card:hover {
+        transform: translateY(-8px);
+        background: rgba(145, 18, 45, 0.15);
+    }
+
+    .contact-card a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+.contact-icon {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+.contact-method {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-detail {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
 .mission-statement {
     font-size: 1.3rem;
     line-height: 1.8;
@@ -238,6 +292,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
+
 
 .partners-main {
     height: calc(100vh - var(--nav-height));

@@ -1,21 +1,17 @@
 RewriteEngine On
 
-# Force HTTPS and www
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
 RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
 
-# Remove .html extensions
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*?)/?$ $1.html [L]
 
-# Specific page routes
 RewriteRule ^members/?$ members.html [NC,L]
 RewriteRule ^partners/?$ partners.html [NC,L]
 RewriteRule ^contact/?$ contact.html [NC,L]
 
-# Remove index.html from URL
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^(.*?)index\.html$ /$1 [L,R=301,NC,NE]

@@ -33,6 +33,7 @@
     <link rel="preload" href="images/partners-hero.jpg" as="image">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 
@@ -59,7 +60,6 @@
           }
         }
     </script>
-
 </head>
 <body class="partners-page">
     <nav class="navbar" aria-label="Main navigation">
@@ -68,6 +68,9 @@
                 <span class="logo-full">Dynasty Droids</span>
                 <span class="logo-abbr">D. D.</span>
             </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/members">Members</a>
@@ -76,5 +79,34 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            function toggleMenu() {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', toggleMenu);
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth <= 768) {
+                            navLinks.classList.remove('active');
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-times');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

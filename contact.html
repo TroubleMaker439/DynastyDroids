@@ -61,7 +61,6 @@
           }
         }
     </script>
-
 </head>
 <body class="contact-page">
     <nav class="navbar" aria-label="Main navigation">
@@ -70,6 +69,9 @@
                 <span class="logo-full">Dynasty Droids</span>
                 <span class="logo-abbr">D. D.</span>
             </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/members">Members</a>
@@ -124,5 +126,34 @@
         </section>
         <div class="scroll-gradient"></div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            function toggleMenu() {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', toggleMenu);
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth <= 768) {
+                            navLinks.classList.remove('active');
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-times');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

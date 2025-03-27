@@ -476,8 +476,13 @@ body {
     }
 
     .leader-card {
-        flex-direction: column;
+        /* flex-direction: column; */
         text-align: center;
+    }
+
+    .team-grid{
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        margin: 0;
     }
 }
 

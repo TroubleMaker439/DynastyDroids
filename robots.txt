@@ -1,19 +1,14 @@
-# robots.txt for dynastydroids.com
 User-agent: *
 Allow: /
 
-# Main sitemap
 Sitemap: https://www.dynastydroids.com/sitemap.xml
 
-# Crawl-delay recommendation
 Crawl-delay: 10
 
-# Disallow specific files that don't need to be indexed
 Disallow: /*.ico$
 Disallow: /*.js$
 Disallow: /*.css$
 
-# Allow main content pages
 Allow: /index.html
 Allow: /members.html
 Allow: /partners.html

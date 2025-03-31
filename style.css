@@ -482,6 +482,7 @@ body {
 
     .team-grid{
         grid-template-columns: repeat(2, minmax(auto, 1fr));
+        gap: 1rem;
         margin: 0;
     }
 }
@@ -551,7 +552,7 @@ body {
     .value-card,
     .member-card,
     .contact-card {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .contact-grid {
@@ -576,6 +577,16 @@ body {
 
     .contact-detail {
         font-size: 1rem;
+    }
+
+    .team-grid{
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        gap: 1rem !important;
+        margin: 0;
+    }
+
+    .centered-content {
+        padding: 0 1rem !important;
     }
 
     .member-image {
@@ -641,7 +652,8 @@ body {
     }
 
     .department-card {
-        padding: 1.5rem 1rem;
+        padding: 0 !important;
+        background-color: transparent;
     }
 
     .member-image {

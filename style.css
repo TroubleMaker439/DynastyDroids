@@ -69,6 +69,7 @@ body {
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    z-index: 1001;
 }
 
     .nav-links a {
@@ -147,6 +148,9 @@ body {
     position: relative;
     z-index: 2;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .header-logo {
@@ -157,17 +161,19 @@ body {
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     border-radius: 50%;
     aspect-ratio: 1/1;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    overflow: visible;
+    background: transparent;
+    border: none;
+    animation: floatLogo 3s ease-in-out infinite;
+    margin-bottom: 1rem;
 }
 
     .header-logo img {
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         transition: transform 0.3s ease;
     }
@@ -180,9 +186,11 @@ body {
     animation: float 2.5s ease-in-out infinite;
     margin: 2rem 0;
     line-height: 1.2;
+    animation: floatText 3s ease-in-out infinite;
+    margin-top: 1rem;
 }
 
-@keyframes float {
+@keyframes floatLogo {
     0%, 100% {
         transform: translateY(0);
     }
@@ -191,6 +199,18 @@ body {
         transform: translateY(-20px);
     }
 }
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
 
 .centered-content {
     text-align: center;
@@ -476,6 +496,7 @@ body {
     }
 
     .leader-card {
+
         text-align: center;
     }
 
@@ -494,140 +515,218 @@ body {
 }
 
 @media (max-width: 768px) {
-    .scroll-section {
-        min-height: 100dvh;
-        height: auto;
-        padding: var(--mobile-nav-height) 0 2rem;
+    :root {
+        --nav-height: var(--mobile-nav-height);
     }
 
-    .nav-links {
-        top: var(--mobile-nav-height);
-        padding: 1rem 0;
-        gap: 1rem;
+    .logo-full {
+        display: none;
     }
 
-    .nav-links a {
-        font-size: 1.2rem;
-        padding: 1rem;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .leader-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem;
+    .logo-abbr {
+        display: inline;
     }
 
     .menu-toggle {
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
+        display: block;
     }
 
-    .header-logo {
-        width: clamp(200px, 70vw, 300px);
-        margin-bottom: 2rem;
+    .nav-links {
+        position: fixed;
+        top: var(--mobile-nav-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .hero-title {
-        font-size: clamp(2rem, 8vw, 2.5rem);
-        margin: 1rem 0;
+        .nav-links.active {
+            transform: translateY(0);
+        }
+
+        .nav-links a {
+            padding: 0.5rem 1rem;
+        }
+
+    .stats-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-gradient {
+        height: 50px;
+        backdrop-filter: blur(8px);
+    }
+
+    .mission-statement {
+        margin-bottom: 3rem;
     }
 
     .stat-card,
     .value-card,
     .member-card,
     .contact-card {
-        padding: 1.5rem;
-        margin: 0 1rem;
+        padding: 1rem;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 16px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.5rem 1rem;
-    }
-
-    .mission-statement {
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
-
-    .member-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .member-name {
-        font-size: 1.3rem;
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 
     .contact-card {
-        padding: 1.25rem;
-        border-radius: 12px;
+        margin: 0 0.5rem;
+        min-height: auto;
     }
 
     .contact-icon {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
     }
 
-    .stats-grid,
-    .values-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .contact-method {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
     }
 
-    .section-title {
-        font-size: clamp(1.75rem, 6vw, 2rem);
+    .contact-detail {
+        font-size: 1rem;
     }
 
-    .section-subtitle {
-        font-size: 1.1rem;
+    .team-grid{
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        gap: 1rem !important;
+        margin: 0;
     }
 
     .centered-content {
         padding: 0 1rem !important;
     }
 
-    .stat-number {
-        font-size: 2.5rem;
+    .member-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
+    }
+
+    .partners-image {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .hero-title {
+        margin: 1.5rem 0;
+    }
+
+    .header-logo {
+        margin-bottom: 2rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .contact-page .hero {
+        padding: 1rem;
+    }
+
+    .contact-grid {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+
+    .contact-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-method {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact-detail {
+        font-size: 0.95rem;
+    }
+
+    .department-card {
+        padding: 0 !important;
+        background-color: transparent;
+    }
+
+    .member-image {
+        width: 140px;
+        height: 140px;
     }
 }
 
 @media (max-width: 360px) {
-    .nav-links a {
-        font-size: 1.1rem;
-        padding: 0.75rem;
-    }
-
-    .member-card {
-        padding: 1rem;
-    }
-
-    .stat-card,
-    .value-card {
-        padding: 1.25rem;
+    .contact-card {
+        padding: 1.2rem 0.8rem;
     }
 
     .contact-method {
         font-size: 1.1rem;
     }
+
+    .contact-detail {
+        font-size: 0.9rem;
+    }
+
+    .member-image {
+        width: 130px;
+        height: 130px;
+    }
 }
 
-@supports (padding: max(0px)) {
-    .navbar,
-    .scroll-section {
-        padding-left: max(1rem, env(safe-area-inset-left));
-        padding-right: max(1rem, env(safe-area-inset-right));
+@media (max-width: 320px) {
+    .contact-card {
+        padding: 1rem 0.5rem;
     }
+
+    .contact-icon {
+        font-size: 1.8rem;
+    }
+
+    .contact-method {
+        font-size: 1rem;
+    }
+
+    .contact-detail {
+        font-size: 0.85rem;
+    }
+
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }

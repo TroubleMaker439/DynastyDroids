@@ -107,6 +107,18 @@ body {
     padding: 0.5rem;
 }
 
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: opacity 0.3s ease;
+}
+
 .scroll-container {
     height: 100vh;
     overflow-y: auto;
@@ -156,8 +168,7 @@ body {
 .header-logo {
     width: clamp(280px, 45vw, 400px);
     height: auto;
-    margin: 0 auto 3rem;
-    animation: float 3s ease-in-out infinite;
+    margin: 0 auto 1rem;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -168,7 +179,6 @@ body {
     background: transparent;
     border: none;
     animation: floatLogo 3s ease-in-out infinite;
-    margin-bottom: 1rem;
 }
 
     .header-logo img {
@@ -183,11 +193,9 @@ body {
     font-size: clamp(2.5rem, 6vw, 3.75rem);
     color: #ffffff;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-    animation: float 2.5s ease-in-out infinite;
-    margin: 2rem 0;
+    margin: 1rem 0;
     line-height: 1.2;
     animation: floatText 3s ease-in-out infinite;
-    margin-top: 1rem;
 }
 
 @keyframes floatLogo {
@@ -209,8 +217,6 @@ body {
         transform: translateY(20px);
     }
 }
-
-
 
 .centered-content {
     text-align: center;
@@ -332,38 +338,47 @@ body {
 .leader-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 2rem;
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     transition: transform 0.3s ease;
-    text-align: left;
+    overflow: visible;
+    margin: 0 auto;
+    position: relative;
 }
 
 .member-image {
-    position: relative;
-    flex-shrink: 0;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    aspect-ratio: 1/1;
+    width: 160px; 
+    height: 160px;
+    margin: 0 auto 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    overflow: hidden; 
     background: rgba(255, 255, 255, 0.05);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    position: relative; 
+    flex-shrink: 0; 
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); 
 }
 
-    .member-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border: 3px solid #fff;
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
-        transition: transform 0.3s ease;
-    }
+.member-details {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem 1rem;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 .role-badge,
 .skill-badge {
@@ -390,15 +405,20 @@ body {
 
 .member-name {
     font-family: 'Playfair Display', serif;
-    margin: 1rem 0 0.5rem;
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
     color: #fff;
+    margin: 0.5rem 0 0.25rem;
+    line-height: 1.3;
 }
 
 .member-role {
     color: rgba(255, 255, 255, 0.8);
-    font-size: clamp(0.85rem, 2vw, 0.95rem);
-    line-height: 1.4;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    line-height: 1.7;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0 0.75rem 0.5rem;
+    word-wrap: break-word;
 }
 
 .contact-card a {
@@ -515,8 +535,29 @@ body {
 }
 
 @media (max-width: 768px) {
+
     :root {
         --nav-height: var(--mobile-nav-height);
+    }
+
+    .leader-card {
+        padding: 1rem;
+    }
+
+    .member-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 1rem;
+    }
+
+    .member-name {
+        font-size: 1.2rem;
+    }
+
+    .member-role {
+        font-size: 1rem;
+        line-height: 1.8;
+        padding: 0 0.5rem 0.75rem;
     }
 
     .logo-full {
@@ -599,10 +640,9 @@ body {
         font-size: 1rem;
     }
 
-    .team-grid{
+    .team-grid {
         grid-template-columns: repeat(2, minmax(auto, 1fr));
-        gap: 1rem !important;
-        margin: 0;
+        gap: 1rem;
     }
 
     .centered-content {
@@ -610,9 +650,8 @@ body {
     }
 
     .member-image {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 1.5rem;
+        width: 140px;
+        height: 140px;
     }
 
     .partners-image {
@@ -627,12 +666,27 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member-name {
+        font-size: 1.1rem;
+    }
+
+    .member-role {
+        font-size: 0.95rem;
+        line-height: 1.9;
+        padding: 0 0.25rem 0.5rem;
+    }
     .navbar {
         padding: 1rem;
     }
 
     .hero-title {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
     }
 
     .header-logo {

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Our Valued Partners</title>
+    <meta name="description" content="Discover the organizations and sponsors supporting Dynasty Droids in our mission to advance robotics education and innovation">
+    <meta name="keywords" content="Dynasty Droids partners, robotics sponsors, STEM supporters, educational partners, technology collaborators">
+    <meta name="author" content="Dynasty Droids">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Valued Partners | Dynasty Droids Robotics">
+    <meta property="og:description" content="Meet the organizations supporting our robotics team's mission and innovation">
+    <meta property="og:image" content="https://www.dynastydroids.com/images/partners-preview.jpg">
+    <meta property="og:url" content="https://www.dynastydroids.com/partners">
+    <meta property="og:site_name" content="Dynasty Droids">
+
+    <meta name="twitter:card" content="logo.png">
+    <meta name="twitter:title" content="Our Valued Partners | Dynasty Droids Robotics">
+    <meta name="twitter:description" content="Meet the organizations supporting our robotics team's mission and innovation">
+    <meta name="twitter:image" content="https://www.dynastydroids.com/images/partners-preview.jpg">
+    <meta name="twitter:site" content="@DynastyDroids">
+
+    <meta name="theme-color" content="#91122D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="canonical" href="https://www.dynastydroids.com/partners">
+
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="images/partners-hero.jpg" as="image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="logo ico.ico">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Our Partners",
+          "description": "Organizations supporting Dynasty Droids robotics team",
+          "url": "https://www.dynastydroids.com/partners",
+          "image": "https://www.dynastydroids.com/images/partners-preview.jpg",
+          "about": {
+            "@type": "Organization",
+            "name": "Dynasty Droids",
+            "description": "Student robotics team with corporate and educational partners",
+            "sponsor": {
+              "@type": "Organization",
+              "name": "Partner Organizations",
+              "description": "Companies and institutions supporting STEM education"
+            }
+          }
+        }
+    </script>
+</head>
+<body class="partners-page">
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Dynasty Droids homepage">
+                <span class="logo-full">Dynasty Droids</span>
+                <span class="logo-abbr">D. D.</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/members">Members</a>
+                <a href="/partners">Partners</a>
+                <a href="/contact">Contact</a>
+                <a href="/psdc" class="active" aria-current="page">PSDC</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            function toggleMenu() {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', toggleMenu);
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth <= 768) {
+                            navLinks.classList.remove('active');
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.add('fa-bars');
+                            icon.classList.remove('fa-times');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

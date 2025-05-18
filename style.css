@@ -33,6 +33,7 @@ body {
     color: var(--light-text);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .navbar {
@@ -282,7 +283,14 @@ body {
 }
 
 .team-grid {
+    display: grid;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 1rem;
 }
 
 .contact-grid {
@@ -298,6 +306,8 @@ body {
     border-radius: 18px;
     padding: 2.5rem;
     transition: all 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
 }
 
     .stat-card:hover,
@@ -528,9 +538,8 @@ body {
     }
 
     .team-grid {
-        grid-template-columns: repeat(2, minmax(auto, 1fr));
-        gap: 1rem;
-        margin: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -620,7 +629,8 @@ body {
     .value-card,
     .member-card,
     .contact-card {
-        padding: 1rem;
+        padding: 1.5rem;
+        margin: 0;
     }
 
     .contact-grid {
@@ -648,8 +658,9 @@ body {
     }
 
     .team-grid {
-        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
+        padding: 0 0.5rem;
     }
 
     .centered-content {
@@ -673,6 +684,17 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 100vw;
+    }
+
+    .member-card {
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 1.25rem;
+    }
 
     .member-image {
         width: 120px;
@@ -745,6 +767,12 @@ body {
 }
 
 @media (max-width: 360px) {
+
+    .member-card {
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+    }
     .contact-card {
         padding: 1.2rem 0.8rem;
     }

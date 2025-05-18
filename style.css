@@ -27,6 +27,8 @@ html {
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     background-color: var(--dark-bg);
     color: var(--light-text);
     line-height: 1.6;
@@ -45,6 +47,8 @@ body {
 }
 
 .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -266,6 +270,7 @@ body {
     gap: 2.5rem;
     max-width: 1280px;
     margin: 0 auto;
+    display: -ms-grid;
 }
 
 .stats-grid {
@@ -299,6 +304,7 @@ body {
     .value-card:hover,
     .member-card:hover,
     .contact-card:hover {
+        -webkit-transform: translateY(-8px);
         transform: translateY(-8px);
         background: rgba(145, 18, 45, 0.15);
     }
@@ -341,7 +347,7 @@ body {
     padding: 1.5rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
@@ -352,19 +358,19 @@ body {
 }
 
 .member-image {
-    width: 160px; 
+    width: 160px;
     height: 160px;
     margin: 0 auto 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    overflow: hidden; 
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
     border: 3px solid rgba(255, 255, 255, 0.1);
-    position: relative; 
-    flex-shrink: 0; 
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); 
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
 }
 
 .member-details {
@@ -502,7 +508,9 @@ body {
     pointer-events: none;
     z-index: 900;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     mask-image: linear-gradient(to top, black 30%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 30%, transparent 100%);
 }
 
 .contact-page .scroll-section {
@@ -516,11 +524,10 @@ body {
     }
 
     .leader-card {
-
         text-align: center;
     }
 
-    .team-grid{
+    .team-grid {
         grid-template-columns: repeat(2, minmax(auto, 1fr));
         gap: 1rem;
         margin: 0;
@@ -681,6 +688,7 @@ body {
         line-height: 1.9;
         padding: 0 0.25rem 0.5rem;
     }
+
     .navbar {
         padding: 1rem;
     }

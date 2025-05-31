@@ -10,7 +10,7 @@
     <meta name="keywords" content="PSDC partners, robotics sponsors, STEM supporters, educational partners, technology collaborators">
     <meta name="author" content="PSDC">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Our Valued Partners | PSDC">
     <meta property="og:description" content="Meet the organizations supporting PSDC's mission in robotics and innovation.">
@@ -81,7 +81,41 @@
         </div>
     </nav>
 
-    <script>
+    <main class="scroll-container">
+        <section class="hero scroll-section" aria-labelledby="psdc-heading">
+            <div class="hero-content">
+                <h1 class="hero-title" id="psdc-heading">Prahova Space Development Conference</h1>
+            </div>
+            <div id="animation-trigger"></div>
+        </section>
+
+        <section class="content-section scroll-section nebula-bg" aria-labelledby="conference-details">
+            <div class="text-content centered-text">
+                <h2 class="section-title">What is PSDC?</h2>
+                <p>The Prahova Space Development Conference brings together space enthusiasts from across the region to showcase cutting-edge student projects and foster collaboration. At this year's conference (which is also the first edition), our team will unveil its entry for the NSS Gerard K. O'Neill Space Settlement Contest, and tease an exciting robotics and aeronautical collaboration with Metrorex—Bucharest's underground rail operator. The program concludes with a storytime and live Q&A featuring Romania's first man in space, cosmonaut Dumitru Prunariu, alongside diplomat Crina Prunariu.</p>
+            </div>
+        </section>
+
+        <section class="content-section scroll-section case-reveal" aria-labelledby="case-reveal-heading">
+            <div class="text-content centered-text">
+                <h2 class="section-title" id="case-reveal-heading">As for what's in here?</h2>
+                <div class="case-container">
+                    <img src="case.jpg" alt="Closed drone case" class="case-image">
+                </div>
+                <p class="reveal-text">Stay tuned to find out!</p>
+            </div>
+        </section>
+
+        <footer class="sponsors-footer sticky-footer" aria-labelledby="sponsors-heading">
+            <div class="sponsors-grid">
+                <img src="hexacraft-logo.png" alt="Hexacraft Sponsor" class="sponsor-logo">
+                <img src="cje-logo.png" alt="CJE Sponsor" class="sponsor-logo">
+                <img src="masterpeace-logo.png" alt="Masterpeace Sponsor" class="sponsor-logo">
+            </div>
+        </footer>
+    </main>
+
+    <script nonce="randomstring">
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');

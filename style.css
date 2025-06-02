@@ -269,6 +269,7 @@ body {
     scrollbar-width: none;
 }
 
+
 /* ===================== Scroll Container ===================== */
     .scroll-container::-webkit-scrollbar {
         display: none;

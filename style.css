@@ -261,14 +261,13 @@ body {
 
 /* ===================== Scroll Container ===================== */
 .scroll-container {
-    height: 100vh;
+    min-height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
 
 /* ===================== Scroll Container ===================== */
     .scroll-container::-webkit-scrollbar {

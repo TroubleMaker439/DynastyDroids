@@ -110,6 +110,27 @@ body {
     box-shadow: 0 0 20px rgba(145, 18, 45, 0.3);
 }
 
+/* Form Button*/
+
+.reveal-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+    .reveal-button:hover {
+        background-color: #b81c3f;
+        transform: scale(1.05);
+    }
+
 /* Sticky footer for PSDC page */
 .sticky-footer {
     position: sticky;

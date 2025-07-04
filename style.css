@@ -917,17 +917,6 @@ body {
         padding: 1.5rem;
         margin: 0 1rem;
     }
-
-    /* ===================== Case Container ===================== */
-
-    .case-container {
-        margin: 1.5rem auto;
-        padding: 0.8rem;
-    }
-
-    .reveal-text {
-        font-size: 1.3rem;
-    }
 }
 
 /* ===================== Responsive Media Queries ===================== */
@@ -1042,18 +1031,6 @@ body {
         width: 140px;
         height: 140px;
     }
-
-    /* ===================== Case Container ===================== */
-
-    .case-container {
-        margin: 1rem auto;
-    }
-
-    .reveal-text {
-        font-size: 1.1rem;
-        margin-top: 1rem;
-    }
-}
 
 /* ===================== Responsive Media Queries ===================== */
 @media (max-width: 360px) {

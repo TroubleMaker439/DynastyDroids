@@ -81,33 +81,54 @@
         </div>
     </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
+    <main class="partners-main">
+        <div class="centered-content">
+            <div class="section-header">
+                <h1 class="section-title">Partners</h1>
+                <p class="section-subtitle"></p>
+            </div>
 
-            function toggleMenu() {
-                navLinks.classList.toggle('active');
-                const icon = menuToggle.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-container">
+                        <img src="cje-logo.png" alt="CJE Prahova Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-info">
+                        <h3 class="partner-name">CJE Prahova</h3>
+                        <p class="partner-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener('click', toggleMenu);
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
 
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', function () {
-                        if (window.innerWidth <= 768) {
-                            navLinks.classList.remove('active');
-                            const icon = menuToggle.querySelector('i');
-                            icon.classList.add('fa-bars');
-                            icon.classList.remove('fa-times');
-                        }
+                function toggleMenu() {
+                    navLinks.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+
+                if (menuToggle && navLinks) {
+                    menuToggle.addEventListener('click', toggleMenu);
+
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.addEventListener('click', function () {
+                            if (window.innerWidth <= 768) {
+                                navLinks.classList.remove('active');
+                                const icon = menuToggle.querySelector('i');
+                                icon.classList.add('fa-bars');
+                                icon.classList.remove('fa-times');
+                            }
+                        });
                     });
-                });
-            }
-        });
-    </script>
+                }
+            });
+        </script>
 </body>
 </html>

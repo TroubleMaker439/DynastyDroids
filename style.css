@@ -674,399 +674,506 @@ body {
     padding: var(--nav-height) 0 2rem;
 }
 
-
-/* ===================== Responsive Media Queries ===================== */
-@media (max-width: 1024px) {
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .stats-grid,
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .values-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .leader-card {
-        text-align: center;
-    }
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .team-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
-    }
+/* ===================== Partners Section ===================== */
+.partners-main {
+    padding: calc(var(--nav-height) + 2rem) 2rem 4rem;
+    min-height: 100vh;
+    background: var(--dark-bg);
 }
 
-
-/* ===================== Responsive Media Queries ===================== */
-@media (max-width: 900px) {
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .contact-grid {
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
+.partner-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-/* ===================== Responsive Media Queries ===================== */
+    .partner-card:hover {
+        transform: translateY(-8px);
+        background: rgba(145, 18, 45, 0.15);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.partner-logo-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.partner-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.partner-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.partner-description {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* ===================== Partners Section ===================== */
 @media (max-width: 768px) {
-
-
-    /* ===================== Root Variables ===================== */
-    :root {
-        --nav-height: var(--mobile-nav-height);
+    .partners-main {
+        padding: calc(var(--nav-height) + 1rem) 1rem 2rem;
     }
 
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .leader-card {
-        padding: 1rem;
-    }
-
-    .member-image {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 1rem;
-    }
-
-    .member-name {
-        font-size: 1.2rem;
-    }
-
-    .member-role {
-        font-size: 1rem;
-        line-height: 1.8;
-        padding: 0 0.5rem 0.75rem;
-    }
-
-
-    /* ===================== Logo ===================== */
-    .logo-full {
-        display: none;
-    }
-
-
-    /* ===================== Logo ===================== */
-    .logo-abbr {
-        display: inline;
-    }
-
-
-    /* ===================== Mobile Menu Toggle ===================== */
-    .menu-toggle {
-        display: block;
-    }
-
-
-    /* ===================== Navigation Links ===================== */
-    .nav-links {
-        position: fixed;
-        top: var(--mobile-nav-height);
-        left: 0;
-        width: 100%;
-        background: var(--primary-color);
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 0;
-        gap: 1.5rem;
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-
-
-        /* ===================== Navigation Links ===================== */
-        .nav-links.active {
-            transform: translateY(0);
-        }
-
-
-        /* ===================== Navigation Links ===================== */
-        .nav-links a {
-            padding: 0.5rem 1rem;
-        }
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .stats-grid,
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .values-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+    .partners-grid {
         grid-template-columns: 1fr;
-    }
-
-    .scroll-gradient {
-        height: 50px;
-        backdrop-filter: blur(8px);
-    }
-
-
-    /* ===================== Mission Statement ===================== */
-    .mission-statement {
-        margin-bottom: 3rem;
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .stat-card,
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .value-card,
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .member-card,
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .contact-card {
-        padding: 1.5rem;
-        margin: 0;
-    }
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .contact-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .contact-card {
-        margin: 0 0.5rem;
-        min-height: auto;
-    }
-
-    .contact-icon {
-        font-size: 2.2rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .contact-method {
-        font-size: 1.3rem;
-        margin-bottom: 0.6rem;
-    }
-
-    .contact-detail {
-        font-size: 1rem;
-    }
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .team-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        padding: 0 0.5rem;
-    }
-
-
-    /* ===================== Centered Content ===================== */
-    .centered-content {
-        padding: 0 1rem !important;
-    }
-
-    .member-image {
-        width: 140px;
-        height: 140px;
-    }
-
-    .partners-image {
-        max-width: 95%;
-    }
-
-    .sponsors-grid {
         gap: 1.5rem;
     }
 
-    .sponsor-logo {
-        height: 40px;
-    }
-
-    .centered-text {
-        padding: 1.5rem;
-        margin: 0 1rem;
+    .partner-logo-container {
+        width: 160px;
+        height: 160px;
     }
 }
 
-/* ===================== Responsive Media Queries ===================== */
-@media (max-width: 600px) {
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .contact-card:hover {
-        transform: translateY(-4px);
-    }
-}
-
-
-/* ===================== Responsive Media Queries ===================== */
 @media (max-width: 480px) {
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .team-grid {
-        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-        grid-template-columns: 1fr;
-        max-width: 100vw;
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .member-card {
-        max-width: 280px;
-        margin: 0 auto;
-        padding: 1.25rem;
-    }
-
-    .member-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .member-name {
-        font-size: 1.1rem;
-    }
-
-    .member-role {
-        font-size: 0.95rem;
-        line-height: 1.9;
-        padding: 0 0.25rem 0.5rem;
-    }
-
-
-    /* ===================== Navbar ===================== */
-    .navbar {
-        padding: 1rem;
-    }
-
-
-    /* ===================== Hero Section ===================== */
-    .hero-title {
-        margin: 1rem 0;
-    }
-
-
-    /* ===================== Header Logo Animation ===================== */
-    .header-logo {
-        margin-bottom: 2rem;
-    }
-
-    .section-header {
-        margin-bottom: 2rem;
-    }
-
-
-    /* ===================== Hero Section ===================== */
-    .contact-page .hero {
-        padding: 1rem;
-    }
-
-
-    /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
-    .contact-grid {
-        gap: 1rem;
-        padding: 0 0.5rem;
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .contact-card {
-        padding: 1.5rem 1rem;
-        border-radius: 12px;
-    }
-
-    .contact-icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-method {
-        font-size: 1.2rem;
-        margin-bottom: 0.4rem;
-    }
-
-    .contact-detail {
-        font-size: 0.95rem;
-    }
-
-
-    /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-    .department-card {
-        padding: 0 !important;
-        background-color: transparent;
-    }
-
-    .member-image {
+    .partner-logo-container {
         width: 140px;
         height: 140px;
+    }
+
+    .partner-name {
+        font-size: 1.3rem;
+    }
+
+    .partner-description {
+        font-size: 0.95rem;
+    }
+
+
+    /* ===================== Responsive Media Queries ===================== */
+    @media (max-width: 1024px) {
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .stats-grid,
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .values-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .leader-card {
+            text-align: center;
+        }
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .team-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+    }
+
+
+    /* ===================== Responsive Media Queries ===================== */
+    @media (max-width: 900px) {
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .contact-grid {
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+    }
+
+
+    /* ===================== Responsive Media Queries ===================== */
+    @media (max-width: 768px) {
+
+
+        /* ===================== Root Variables ===================== */
+        :root {
+            --nav-height: var(--mobile-nav-height);
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .leader-card {
+            padding: 1rem;
+        }
+
+        .member-image {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 1rem;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+        }
+
+        .member-role {
+            font-size: 1rem;
+            line-height: 1.8;
+            padding: 0 0.5rem 0.75rem;
+        }
+
+
+        /* ===================== Logo ===================== */
+        .logo-full {
+            display: none;
+        }
+
+
+        /* ===================== Logo ===================== */
+        .logo-abbr {
+            display: inline;
+        }
+
+
+        /* ===================== Mobile Menu Toggle ===================== */
+        .menu-toggle {
+            display: block;
+        }
+
+
+        /* ===================== Navigation Links ===================== */
+        .nav-links {
+            position: fixed;
+            top: var(--mobile-nav-height);
+            left: 0;
+            width: 100%;
+            background: var(--primary-color);
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            gap: 1.5rem;
+            transform: translateY(-150%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+            /* ===================== Navigation Links ===================== */
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+
+            /* ===================== Navigation Links ===================== */
+            .nav-links a {
+                padding: 0.5rem 1rem;
+            }
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .stats-grid,
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .values-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: 1fr;
+        }
+
+        .scroll-gradient {
+            height: 50px;
+            backdrop-filter: blur(8px);
+        }
+
+
+        /* ===================== Mission Statement ===================== */
+        .mission-statement {
+            margin-bottom: 3rem;
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .stat-card,
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .value-card,
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .member-card,
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .contact-card {
+            padding: 1.5rem;
+            margin: 0;
+        }
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .contact-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .contact-card {
+            margin: 0 0.5rem;
+            min-height: auto;
+        }
+
+        .contact-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-method {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-detail {
+            font-size: 1rem;
+        }
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .team-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            padding: 0 0.5rem;
+        }
+
+
+        /* ===================== Centered Content ===================== */
+        .centered-content {
+            padding: 0 1rem !important;
+        }
+
+        .member-image {
+            width: 140px;
+            height: 140px;
+        }
+
+        .partners-image {
+            max-width: 95%;
+        }
+
+        .sponsors-grid {
+            gap: 1.5rem;
+        }
+
+        .sponsor-logo {
+            height: 40px;
+        }
+
+        .centered-text {
+            padding: 1.5rem;
+            margin: 0 1rem;
+        }
+        .partners-main {
+            padding: calc(var(--nav-height) + 1rem) 1rem 2rem;
+        }
+
+        .partners-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .partner-logo-container {
+            width: 160px;
+            height: 160px;
+        }
     }
 
     /* ===================== Responsive Media Queries ===================== */
-    @media (max-width: 360px) {
+    @media (max-width: 600px) {
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+    }
+
+
+    /* ===================== Responsive Media Queries ===================== */
+    @media (max-width: 480px) {
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .team-grid {
+            /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+            grid-template-columns: 1fr;
+            max-width: 100vw;
+        }
 
 
         /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
         .member-card {
-            max-width: 100%;
-            padding: 1rem;
-            border-radius: 12px;
-        }
-
-        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-        .contact-card {
-            padding: 1.2rem 0.8rem;
-        }
-
-        .contact-method {
-            font-size: 1.1rem;
-        }
-
-        .contact-detail {
-            font-size: 0.9rem;
-        }
-
-        .member-image {
-            width: 130px;
-            height: 130px;
-        }
-    }
-
-
-    /* ===================== Responsive Media Queries ===================== */
-    @media (max-width: 320px) {
-
-        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
-        .contact-card {
-            padding: 1rem 0.5rem;
-        }
-
-        .contact-icon {
-            font-size: 1.8rem;
-        }
-
-        .contact-method {
-            font-size: 1rem;
-        }
-
-        .contact-detail {
-            font-size: 0.85rem;
+            max-width: 280px;
+            margin: 0 auto;
+            padding: 1.25rem;
         }
 
         .member-image {
             width: 120px;
             height: 120px;
         }
-    }
+
+        .member-name {
+            font-size: 1.1rem;
+        }
+
+        .member-role {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            padding: 0 0.25rem 0.5rem;
+        }
 
 
-    /* ===================== Contact Form Inputs ===================== */
-    .contact-form input,
-    /* ===================== Contact Form Inputs ===================== */
-    .contact-form textarea {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+        /* ===================== Navbar ===================== */
+        .navbar {
+            padding: 1rem;
+        }
+
+
+        /* ===================== Hero Section ===================== */
+        .hero-title {
+            margin: 1rem 0;
+        }
+
+
+        /* ===================== Header Logo Animation ===================== */
+        .header-logo {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+
+        /* ===================== Hero Section ===================== */
+        .contact-page .hero {
+            padding: 1rem;
+        }
+
+
+        /* ===================== Grid Layouts (Stats, Values, Team, Contact) ===================== */
+        .contact-grid {
+            gap: 1rem;
+            padding: 0 0.5rem;
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .contact-card {
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-method {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-detail {
+            font-size: 0.95rem;
+        }
+
+
+        /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+        .department-card {
+            padding: 0 !important;
+            background-color: transparent;
+        }
+
+        .member-image {
+            width: 140px;
+            height: 140px;
+        }
+
+        /* ===================== Responsive Media Queries ===================== */
+        @media (max-width: 360px) {
+
+
+            /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+            .member-card {
+                max-width: 100%;
+                padding: 1rem;
+                border-radius: 12px;
+            }
+
+            /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+            .contact-card {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .contact-method {
+                font-size: 1.1rem;
+            }
+
+            .contact-detail {
+                font-size: 0.9rem;
+            }
+
+            .member-image {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+
+        /* ===================== Responsive Media Queries ===================== */
+        @media (max-width: 320px) {
+
+            /* ===================== Cards (Stat, Value, Member, Contact) ===================== */
+            .contact-card {
+                padding: 1rem 0.5rem;
+            }
+
+            .contact-icon {
+                font-size: 1.8rem;
+            }
+
+            .contact-method {
+                font-size: 1rem;
+            }
+
+            .contact-detail {
+                font-size: 0.85rem;
+            }
+
+            .member-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+
+        /* ===================== Contact Form Inputs ===================== */
+        .contact-form input,
+        /* ===================== Contact Form Inputs ===================== */
+        .contact-form textarea {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
     }
-}

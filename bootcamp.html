@@ -67,6 +67,8 @@
             padding: calc(var(--nav-height) + 2rem) 2rem 4rem;
             min-height: 100vh;
             background: var(--dark-bg);
+            display: flex;
+            flex-direction: column;
         }
 
         .workshop-grid {
@@ -76,6 +78,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem;
+            flex-grow: 1;
         }
 
         .workshop-card {
@@ -110,10 +113,11 @@
             flex-grow: 1;
         }
 
-        .workshop-button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            font-size: 1.1rem;
+        .main-signup-button {
+            display: block;
+            width: fit-content;
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
             color: #fff;
             background-color: var(--accent-color);
             border: none;
@@ -121,18 +125,34 @@
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            margin-top: auto;
+            margin: 3rem auto 0;
+            text-align: center;
         }
 
-            .workshop-button:hover {
+            .main-signup-button:hover {
                 background-color: #b81c3f;
                 transform: scale(1.05);
+            }
+
+        .coming-soon {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+
+            .coming-soon .workshop-title {
+                color: rgba(255, 255, 255, 0.7);
             }
 
         @media (max-width: 768px) {
             .workshop-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+
+            .main-signup-button {
+                width: 90%;
+                padding: 1rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -167,7 +187,6 @@
                     Learn how to create logos, posters, and cool materials for a robotics team.
                     Everything about colors, shapes, and ideas that come to life!
                 </p>
-                <a href="#" class="workshop-button">Sign Up</a>
             </div>
 
             <div class="workshop-card">
@@ -176,7 +195,6 @@
                     Discover how a robot "thinks"! You'll learn to write simple code
                     and control robots in a fun way.
                 </p>
-                <a href="#" class="workshop-button">Sign Up</a>
             </div>
 
             <div class="workshop-card">
@@ -185,7 +203,6 @@
                     Learn how a team is organized: who does what, how we plan,
                     and how we work together so everything runs smoothly.
                 </p>
-                <a href="#" class="workshop-button">Sign Up</a>
             </div>
 
             <div class="workshop-card">
@@ -194,7 +211,6 @@
                     Use 3D applications to design parts for robots!
                     Put your ideas into practice, right on the screen.
                 </p>
-                <a href="#" class="workshop-button">Sign Up</a>
             </div>
 
             <div class="workshop-card">
@@ -203,17 +219,22 @@
                     Learn how to take great photos and videos to show the world
                     what your team is doing! A bit of technique, a bit of creativity.
                 </p>
-                <a href="#" class="workshop-button">Sign Up</a>
             </div>
 
             <div class="workshop-card coming-soon">
                 <h3 class="workshop-title">MORE TO COME</h3>
                 <p class="workshop-description">
+                    We're constantly developing new workshops and learning opportunities.
                     Stay tuned for exciting additions to our bootcamp program!
                 </p>
-                <a class="workshop-button coming-soon-button">Coming Soon</a>
             </div>
         </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGKkrSIzGjEongpl_n84VSb1GWA7XETaPjLodqyHrHvuphOQ/viewform"
+           class="main-signup-button"
+           target="_blank">
+            Sign Up!
+        </a>
     </div>
 
     <script nonce="randomstring">

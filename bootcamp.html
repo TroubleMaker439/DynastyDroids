@@ -62,100 +62,6 @@
         }
     </script>
 
-    <style>
-        .bootcamp-main {
-            padding: calc(var(--nav-height) + 2rem) 2rem 4rem;
-            min-height: 100vh;
-            background: var(--dark-bg);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .workshop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-            flex-grow: 1;
-        }
-
-        .workshop-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 18px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-            .workshop-card:hover {
-                transform: translateY(-8px);
-                background: rgba(145, 18, 45, 0.15);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            }
-
-        .workshop-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-        }
-
-        .workshop-description {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            flex-grow: 1;
-        }
-
-        .main-signup-button {
-            display: block;
-            width: fit-content;
-            padding: 1rem 2rem;
-            font-size: 1.3rem;
-            color: #fff;
-            background-color: var(--accent-color);
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            margin: 3rem auto 0;
-            text-align: center;
-        }
-
-            .main-signup-button:hover {
-                background-color: #b81c3f;
-                transform: scale(1.05);
-            }
-
-        .coming-soon {
-            background: rgba(255, 255, 255, 0.03);
-            border: 2px dashed rgba(255, 255, 255, 0.1);
-        }
-
-            .coming-soon .workshop-title {
-                color: rgba(255, 255, 255, 0.7);
-            }
-
-        @media (max-width: 768px) {
-            .workshop-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .main-signup-button {
-                width: 90%;
-                padding: 1rem;
-                font-size: 1.2rem;
-            }
-        }
-    </style>
 </head>
 
 <body class="partners-page">
@@ -178,64 +84,6 @@
         </div>
     </nav>
 
-
-    <div class="bootcamp-main">
-        <div class="workshop-grid">
-            <div class="workshop-card">
-                <h3 class="workshop-title">DESIGN WORKSHOP</h3>
-                <p class="workshop-description">
-                    Learn how to create logos, posters, and cool materials for a robotics team.
-                    Everything about colors, shapes, and ideas that come to life!
-                </p>
-            </div>
-
-            <div class="workshop-card">
-                <h3 class="workshop-title">PROGRAMMING WORKSHOP</h3>
-                <p class="workshop-description">
-                    Discover how a robot "thinks"! You'll learn to write simple code
-                    and control robots in a fun way.
-                </p>
-            </div>
-
-            <div class="workshop-card">
-                <h3 class="workshop-title">MANAGEMENT WORKSHOP</h3>
-                <p class="workshop-description">
-                    Learn how a team is organized: who does what, how we plan,
-                    and how we work together so everything runs smoothly.
-                </p>
-            </div>
-
-            <div class="workshop-card">
-                <h3 class="workshop-title">CAD DESIGN WORKSHOP</h3>
-                <p class="workshop-description">
-                    Use 3D applications to design parts for robots!
-                    Put your ideas into practice, right on the screen.
-                </p>
-            </div>
-
-            <div class="workshop-card">
-                <h3 class="workshop-title">PHOTO/VIDEO WORKSHOP</h3>
-                <p class="workshop-description">
-                    Learn how to take great photos and videos to show the world
-                    what your team is doing! A bit of technique, a bit of creativity.
-                </p>
-            </div>
-
-            <div class="workshop-card coming-soon">
-                <h3 class="workshop-title">MORE TO COME</h3>
-                <p class="workshop-description">
-                    We're constantly developing new workshops and learning opportunities.
-                    Stay tuned for exciting additions to our bootcamp program!
-                </p>
-            </div>
-        </div>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGKkrSIzGjEongpl_n84VSb1GWA7XETaPjLodqyHrHvuphOQ/viewform"
-           class="main-signup-button"
-           target="_blank">
-            Sign Up!
-        </a>
-    </div>
 
     <script nonce="randomstring">
         document.addEventListener('DOMContentLoaded', function () {
@@ -267,3 +115,4 @@
     </script>
 </body>
 </html>
+

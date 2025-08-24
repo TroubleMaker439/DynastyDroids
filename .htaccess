@@ -12,8 +12,9 @@ RewriteRule ^(.*?)/?$ $1.html [L]
 RewriteRule ^members/?$ members.html [NC,L]
 RewriteRule ^partners/?$ partners.html [NC,L]
 RewriteRule ^contact/?$ contact.html [NC,L]
-RewriteRule ^bootcamp/?$ bootcamp.html [NC,L]
+RewriteRule ^?/?$ ?.html [NC,L]
 
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^(.*?)index\.html$ /$1 [L,R=301,NC,NE]
+
 

@@ -13,4 +13,4 @@ Allow: /index.html
 Allow: /members.html
 Allow: /partners.html
 Allow: /contact.html
-Allow: /?.html
+Allow: /new.html

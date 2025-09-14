@@ -4,22 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>Big</title>
     <link rel="canonical" href="https://dynastydroids.com/?">
-
-    <link rel="preload" href="style.css" as="style">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/x-icon" href="logo ico.ico">
     <link rel="apple-touch-icon" href="logo.png">
-</head>
+    <style>
+        :root {
+            --logo-img: url("lgo.png");
+            --accent: #ffffff;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #000;
+            color: var(--accent);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .logo-full {
+            display: inline;
+        }
+
+        .logo-abbr {
+            display: none;
+        }
+
+        .school-affiliation {
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+            .nav-links a {
+                color: var(--accent);
+                text-decoration: none;
+                font-family: "Roboto Condensed", sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: opacity 0.3s ease;
+            }
+
+                .nav-links a:hover,
+                .nav-links a.active {
+                    opacity: 0.7;
+                }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo-full {
+                display: none;
+            }
+
+            .logo-abbr {
+                display: inline;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+                .nav-links.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+            .poster::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: var(--logo-img);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 35vw auto;
+                width: 100%;
+                height: 100%;
+                opacity: 0.35;
+                filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
+                z-index: 0;
+            }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            user-select: none;
+        }
+
+        .small-top {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: clamp(14px, 2vw, 20px);
+            user-select: none;
+        }
+
+        .big {
+            font-weight: 900;
+            font-size: clamp(80px, 18vw, 200px);
+            line-height: 1;
+            user-select: none;
+        }
+
+        .sub {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: clamp(16px, 2vw, 24px);
+        }
+
+        .footer-tag {
+            position: absolute;
+            bottom: 4vh;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 700;
+            font-size: clamp(12px, 2vw, 18px);
+            text-transform: uppercase;
+            z-index: 1;
+            user-select: none;
+        }
+    </style>
+</head>
 <body class="partners-page">
     <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
@@ -39,23 +239,26 @@
             </div>
         </div>
     </nav>
-
-
+    <div class="poster">
+        <div class="hero">
+            <div class="small-top">SOMETHING</div>
+            <h1 class="big">BIG</h1>
+            <div class="sub">IS COMING</div>
+        </div>
+        <div class="footer-tag">D R O I D T R O T T E R</div>
+    </div>
     <script nonce="randomstring">
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-
             function toggleMenu() {
                 navLinks.classList.toggle('active');
                 const icon = menuToggle.querySelector('i');
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
             }
-
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', toggleMenu);
-
                 document.querySelectorAll('.nav-links a').forEach(link => {
                     link.addEventListener('click', function () {
                         if (window.innerWidth <= 768) {
@@ -71,8 +274,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-

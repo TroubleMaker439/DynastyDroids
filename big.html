@@ -15,6 +15,9 @@
         :root {
             --logo-img: url("lgo.png");
             --accent: #ffffff;
+            --primary-color: #000;
+            --light-text: #fff;
+            --nav-hover-color: #fff;
         }
 
         * {
@@ -24,87 +27,11 @@
         }
 
         body {
-            font-family: 'Roboto Condensed', sans-serif;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            width: 100%;
-            height: 100%;
+            font-family: "Montserrat", sans-serif;
             background: #000;
             color: var(--accent);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .poster {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: url("space.jpg") no-repeat center center/cover;
-        }
-
-            .poster::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-image: var(--logo-img);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 35vw auto;
-                width: 100%;
-                height: 100%;
-                opacity: 0.35;
-                filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
-                z-index: 0;
-            }
-
-        .hero {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-            user-select: none;
-        }
-
-        .small-top {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: clamp(14px, 2vw, 20px);
-        }
-
-        .big {
-            font-weight: 900;
-            font-size: clamp(80px, 18vw, 200px);
-            line-height: 1;
-        }
-
-        .sub {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: clamp(16px, 2vw, 24px);
-        }
-
-        .footer-tag {
-            position: absolute;
-            bottom: 4vh;
-            left: 50%;
-            transform: translateX(-50%);
-            font-weight: 700;
-            font-size: clamp(12px, 2vw, 18px);
-            text-transform: uppercase;
-            z-index: 1;
+            overflow-x: hidden;
+            margin: 0;
         }
 
         .navbar {
@@ -176,6 +103,7 @@
                 font-size: 1.1rem;
                 white-space: nowrap;
                 font-family: 'Roboto Condensed', sans-serif;
+                transition: color 0.3s ease;
             }
 
                 .nav-links a::after {
@@ -237,6 +165,77 @@
                 .nav-links a {
                     padding: 0.5rem 1rem;
                 }
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url("space.jpg") no-repeat center;
+            padding-top: 80px;
+        }
+
+            .poster::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: var(--logo-img);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 35vw auto;
+                width: 100%;
+                height: 100%;
+                opacity: 0.35;
+                filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
+                z-index: 0;
+            }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            user-select: none;
+        }
+
+        .small-top {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: clamp(14px, 2vw, 20px);
+        }
+
+        .big {
+            font-weight: 900;
+            font-size: clamp(80px, 18vw, 200px);
+            line-height: 1;
+        }
+
+        .sub {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: clamp(16px, 2vw, 24px);
+        }
+
+        .footer-tag {
+            position: absolute;
+            bottom: 4vh;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 700;
+            font-size: clamp(12px, 2vw, 18px);
+            text-transform: uppercase;
+            z-index: 1;
         }
     </style>
 </head>
